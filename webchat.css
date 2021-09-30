@@ -1,0 +1,126 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-clr: skyblue;
+    --sdn-clr: beige;
+    --ter-clr: pink;
+
+}
+
+#container {
+    width: 600px;
+    height: 700px;
+    background-color: skyblue;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#chatroom {
+    width: 600px;
+    height: 700px;
+    background-color: beige;
+    margin: 0 auto;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 10px;
+
+}
+
+
+
+/* need to change */
+#chatholder { 
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    background-color: skyblue;
+    justify-content: center;
+    
+
+}
+
+.chatbox {
+    width: fit-content;
+    height: auto;
+    padding:10px;
+    box-sizing: border-box;
+    background-color: pink;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#chatholder button {
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+#chatholder input {
+    margin: 10px;
+    width: 150px;
+    height: 30px;
+}
+
+.left {
+    float: left;
+    background-color: lightgreen;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    animation-name: fromleft;
+    animation-duration: 1s;
+}
+
+@keyframes fromleft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.right {
+    float: right;
+    background-color: lightblue;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    animation-name: fromright;
+    animation-duration: 1s;
+}
+
+@keyframes fromright {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.division {
+    display: flex;
+    flex-direction: row;
+}
+
+.date {
+    margin-top: 5px;
+    font-style: italic;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+ </head>
+<body>
+    <div id="container">
+        <div id="left"></div>
+        <div id="right">
+            <h1>Welcome Web Chat </h1>
+            <br/>
+            <h5>Please enter Anon name to start</h5>
+                        
+            <input id="inputName" type="text" placeholder="Name"/>
+            <br/>
+            <button onclick="storage()"> Click To Start </button>
+        </div>
+    </div>
+
+    <script>    
+        var inputName = document.getElementById('inputName');
+        window.addEventListener('keydown', function(evt){
+           
+            if (evt.key == 'Enter') 
+            {
+                if (inputName.value !== ""){
+                    storage();
+                    localStorage.setItem('name', document.getElementById('inputName').value); //store
+                    
+                }
+                else{
+                    alert('What are you doing?!')
+                    console.log('error');
+                }
+            }
+        })
+                
+        
+        function storage(){
+            if (inputName.value !== ""){
+                window.location.href='webchat.html';
+                localStorage.setItem('name', document.getElementById('inputName').value); //store
+                    
+                }
+                else{
+                    alert('What are you doing?!')
+                    console.log('error');
+                }
+        }
+      //link 
+      
+    
+    </script>
+</body>
+</html>
